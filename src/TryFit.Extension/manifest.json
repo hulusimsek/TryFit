@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "TryFit - Trendyol 3D & AI Sanal Deneme",
+  "version": "1.0.0",
+  "description": "Trendyol ürünlerini tek tıkla yapay zeka ile üzerinizde deneyin, 3D beden simülatörü ve beden tablosu analizini görün.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TryFit Studio"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.trendyol.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
